@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home</title>
-</head>
-<body>
-    <h1>Welcome to the Home Page</h1>
-</body>
-</html>
+@extends('layouts.master')
+
+@section('title', 'Home')
+
+@section('content')
+    <h2>Welcome to the Home Page</h2>
+    <p>This is the home page of the blog.</p>
+    <p>{{ $message }}</p>
+@endsection
