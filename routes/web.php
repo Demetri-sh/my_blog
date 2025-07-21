@@ -27,5 +27,3 @@ Route::get('/user/{id}', function ($id) {
 Route::get('/greet/{name?}', function ($name = 'Guest') {
     return "Hello, $name!";
 });
-
-Route::get('/contact', [PageController::class, 'contact'])->name('contact');
