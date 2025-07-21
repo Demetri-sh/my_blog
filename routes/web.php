@@ -1,20 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/test', function() {
     return view('Hello World');
 });
-
-Route::view('/', 'home');
-Route::view('/about', 'about');
-Route::view('/contact', 'contact');
-
-use App\Http\Controllers\PageController;
 
 Route::get('/', [PageController::class, 'home']);
 Route::get('/about', [PageController::class, 'about']);
