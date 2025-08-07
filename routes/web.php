@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 
 Route::get('/test', function () {
     return view('Hello World');
@@ -18,3 +19,7 @@ Route::get('/user/{id}', function ($id) {
 Route::get('/greet/{name?}', function ($name = 'Guest') {
     return "Hello, $name!";
 });
+
+Route::get('/posts', [PostController::class, 'index']);
+
+Route::get('/posts/{id}', [PostController::class, 'show']);
